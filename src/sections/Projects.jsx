@@ -14,7 +14,7 @@ const projects = [
     },
     {
         title: "TickIt - A To-Do-List Application",
-        description: "Leveraging ReactJS and Tailwind CSS, I built a responsive and intuitive To-Do-List application that streamlines daily task management through real-time status control, persistent browser-based storage, and a modular architecture utilizing Hooks (useEffect), State, and Props.",
+        description: "Leveraging ReactJS and Tailwind CSS, built a responsive and intuitive To-Do-List application that streamlines daily task management through real-time status control.",
         link: "https://tickit-app.netlify.app/",
         image: project2,
         tags: ["ReactJS", "Tailwind CSS", "JavaScript"],
