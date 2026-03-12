@@ -3,6 +3,7 @@ import heroBg from '@/assets/hero-bg.jpg';
 import profilepic from '@/assets/profile-photo.png';
 import { ArrowRight, Github as githubIcon, Linkedin as linkedinIcon, Mail, Download, ChevronDown } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { useState } from 'react';
 
 const skills = [
     "React", "JavaScript", "TypeScript", "Tailwind CSS", "GitHub", "SQL", "MongoDB", "Node.js", "Java", "SVN", "Postman", 
@@ -10,6 +11,19 @@ const skills = [
 ];
 
 export const Hero = () => {
+    const [copied, setCopied] = useState(false);
+
+    const handleMailClick = (e, href) => {
+        if (href.startsWith('mailto:')) {
+            e.preventDefault(); //preventing browser to open email in next tab during the copy function.
+            const email = href.replace('mailto:', '');
+            navigator.clipboard.writeText(email);
+            
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000); // Hide after 2 seconds
+        }
+    };
+
     return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background*/}
@@ -81,18 +95,29 @@ export const Hero = () => {
                 
                     {/* Social Links */}
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                        <span className="text-sm text-muted-foreground">Follow me: </span>
+                        <span className="text-sm text-muted-foreground">Follow me: </span>                        
                         {[
-                            {icon: githubIcon, href: '#'},
-                            {icon: linkedinIcon, href: '#'},
-                            {icon: Mail, href: '#'},                            
+                            {icon: githubIcon, href: 'https://github.com/TanviSudhalkar', label: "Github"},
+                            {icon: linkedinIcon, href: 'https://www.linkedin.com/in/tanvisudhalkar/', label: "Linkedin"},
+                            {icon: Mail, href: 'mailto:tanvi1sudhalkar@gmail.com', label: "tanvi1sudhalkar@gmail.com" },                            
                         ].map((social, idx) => (
                             <a 
                                 key={idx} 
                                 href={social.href} 
+                                title={social.label}
+                                target={social.href.startsWith('mailto:') ? '_self' : '_blank'}
+                                rel="noopener noreferrer"
+                                onClick={(e) => handleMailClick(e, social.href)}
                                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                             >
-                                {<social.icon className="w-5 h-5" />}
+                                <social.icon className="w-5 h-5" />
+
+                                {/* Fancy Floating text for email copied */}
+                                {social.icon === Mail && copied && (
+                                    <span className="absolute top-12 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-bold py-1 px-2 rounded shadow-lg animate-bounce">
+                                        Copied!
+                                    </span>
+                                )}
                             </a>
                         ))}
                     </div>
