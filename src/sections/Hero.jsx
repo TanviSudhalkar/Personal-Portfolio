@@ -58,10 +58,10 @@ export const Hero = () => {
             
             <div className='grid lg:grid-cols-2 gap-12 items-center'>
                 {/* Left Column - Text Content */}
-                <div className='space-y-8'>
+                <div className='space-y-6'>
                     <div className='animate-fade-in'>
                         <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-md text-primary'>
-                            <span className='w-2 h-2 bg-primary rounded-full animate-pulse' />React Developer  
+                            <span className='w-2 h-2 bg-primary rounded-full animate-pulse' />Front End Developer  
                         </span>                        
                     </div>
 
