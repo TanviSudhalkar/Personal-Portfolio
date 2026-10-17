@@ -9,7 +9,7 @@ const experiences = [
     },
     {
         period: "May 2021 - Dec 2024",
-        role: "Senior Front End Developer",
+        role: "Front End Developer",
         company: "Tata Consultancy Services",
         description: "Built scalable React.js and TypeScript front-end modules with 30% faster load times, integrated RESTful APIs using Node.js and MongoDB for real-time personalized content, managed deployments and code reviews with Git/GitHub, and collaborated with cross-functional teams to ensure responsive design and smooth Agile delivery.",
         technologies: ["React, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, RESTful APIs, Node.js, MongoDB, Github"],
@@ -17,7 +17,7 @@ const experiences = [
     },
     {
         period: "Aug 2019 - Apr 2021",
-        role: "Front End Developer",
+        role: "Junior Web Developer",
         company: "Tata Consultancy Services",
         description: "Revamped a legacy portal using HTML5, CSS3, JavaScript, Bootstrap, jQuery, and Java by creating cross-browser compatible, mobile-responsive UI components, optimizing SQL queries for internal dashboards, and collaborating with QA and DevOps via Jenkins in Agile sprints to deliver 95% of features on time, improving mobile responsiveness, query efficiency, reducing load times, and increasing UI consistency by 25%.",
         technologies: ["JavaScript, HTML, CSS, jQuery, SQL, Jenkins, Java, SDLC"],

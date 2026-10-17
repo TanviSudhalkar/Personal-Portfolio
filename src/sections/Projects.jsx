@@ -3,7 +3,7 @@ import project1 from '@/assets/project1.png';
 import project2 from '@/assets/project2.png';
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
-const projects = [
+const projects = [    
     {
         title: "ChatGPT Clone",
         description: "Developed a responsive ChatGPT clone using React and Tailwind CSS, featuring an API-ready architecture, real-time message state, and persistent chat history via LocalStorage.",
@@ -19,6 +19,14 @@ const projects = [
         image: project2,
         tags: ["ReactJS", "Tailwind CSS", "JavaScript"],
         github: "https://github.com/TanviSudhalkar/To-Do-List"
+    },
+    {
+        title: "TS WebCraft Solutions",
+        description: "TS WebCraft is a Dummy technology solutions company offering IT consulting, web and application development, cloud services, data analytics, AI innovations to help businesses and public-sector organizations grow.",
+        link: "https://tswebcraft.netlify.app/",
+        image: project3,
+        tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+        github: "https://github.com/TanviCminc/CMINC_WWW_3.0"
     },
 ];
 
