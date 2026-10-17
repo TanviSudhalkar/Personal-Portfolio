@@ -20,7 +20,7 @@ export const Hero = () => {
             navigator.clipboard.writeText(email);
             
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000); // Hide after 2 seconds
+            setTimeout(() => setCopied(false), 2000); // Hide after 2 seconds.
         }
     };
 
