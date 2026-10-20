@@ -7,7 +7,8 @@ import { useState } from 'react';
 
 const skills = [
     "React", "JavaScript", "TypeScript", "Tailwind CSS", "GitHub", "SQL", "MongoDB", "Node.js", "Java", "SVN", "Postman", 
-    "Jira", "Jenkins", "Restful APIs"
+    "Jira", "Jenkins", "Restful APIs", "GitHub Copilot", "ChatGPT", "LLM-Based Development Tools", "SDLC", "Agile", "API Integration", 
+    "Responsive Web Design", "Cross-Browser Compatibility"
 ];
 
 export const Hero = () => {
@@ -158,7 +159,7 @@ export const Hero = () => {
                 <div className="relative overflow-hidden">
                     <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-background to-transparent z-10" />
                     <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-background to-transparent z-10" />
-                        <div className="flex animate-marquee">
+                        <div className="flex animate-marquee mb-6">
                             {[...skills, ...skills] .map((skill, idx) => (
                                 <div key={idx} className="shrink-0 px-8 py-4">
                                     <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground 
